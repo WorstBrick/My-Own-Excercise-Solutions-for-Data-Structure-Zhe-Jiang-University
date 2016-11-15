@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1477385501 source:c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\complete binary search tree\driver.c
+	"Interface.h"
+
+1477383396 c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\complete binary search tree\interface.h
+	"Item.h"
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+
+1477382625 c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\complete binary search tree\item.h
+
+1477383996 source:c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\complete binary search tree\implementation.c
+	"Interface.h"
+

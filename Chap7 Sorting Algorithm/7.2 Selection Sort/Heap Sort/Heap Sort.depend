@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1478769319 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.2 selection sort\heap sort\driver.c
+	"Interface.h"
+
+1478769388 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.2 selection sort\heap sort\interface.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Item.h"
+
+1478769245 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.2 selection sort\heap sort\item.h
+
+1478769308 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.2 selection sort\heap sort\implementation.c
+	"Interface.h"
+

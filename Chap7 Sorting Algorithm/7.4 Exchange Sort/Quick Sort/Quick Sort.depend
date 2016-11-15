@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1479193887 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.4 exchange sort\quick sort\implementation.c
+	<stdio.h>
+	<stdbool.h>
+

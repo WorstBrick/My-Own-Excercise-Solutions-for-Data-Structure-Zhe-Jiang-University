@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1474785505 source:c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree isomorphism\driver.c
+	"Interface.h"
+
+1474785026 c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree isomorphism\interface.h
+	"Tree.h"
+	<stdlib.h>
+	<stdio.h>
+
+1474784352 c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree isomorphism\tree.h
+
+1474786284 source:c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree isomorphism\implementation.c
+	"Interface.h"
+

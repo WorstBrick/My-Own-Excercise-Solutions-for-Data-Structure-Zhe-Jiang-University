@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1477986022 source:c:\users\administrator\desktop\data structure\chap6 graph\excercise\gas station\driver.c
+	"Interface.h"
+
+1477983221 c:\users\administrator\desktop\data structure\chap6 graph\excercise\gas station\interface.h
+	"Item.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1478077304 c:\users\administrator\desktop\data structure\chap6 graph\excercise\gas station\item.h
+
+1478156024 source:c:\users\administrator\desktop\data structure\chap6 graph\excercise\gas station\implementation.c
+	"Interface.h"
+

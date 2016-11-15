@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1473951906 source:f:\code\数据结构\3.3 堆栈\顺序栈\client.c
+	"Definition.h"
+	<ctype.h>
+
+1473946370 f:\code\数据结构\3.3 堆栈\顺序栈\definition.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	"Data.h"
+
+1473946352 f:\code\数据结构\3.3 堆栈\顺序栈\data.h
+
+1473946586 source:f:\code\数据结构\3.3 堆栈\顺序栈\implementation.c
+	"Definition.h"
+

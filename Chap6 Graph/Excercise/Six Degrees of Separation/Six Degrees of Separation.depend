@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1476689679 source:c:\users\administrator\desktop\data structure\chap6 graph\excercise\six degrees of separation\driver.c
+	"Interface.h"
+
+1476612369 c:\users\administrator\desktop\data structure\chap6 graph\excercise\six degrees of separation\interface.h
+	"Item.h"
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+
+1476608983 c:\users\administrator\desktop\data structure\chap6 graph\excercise\six degrees of separation\item.h
+
+1476689163 source:c:\users\administrator\desktop\data structure\chap6 graph\excercise\six degrees of separation\implementation.c
+	"Interface.h"
+

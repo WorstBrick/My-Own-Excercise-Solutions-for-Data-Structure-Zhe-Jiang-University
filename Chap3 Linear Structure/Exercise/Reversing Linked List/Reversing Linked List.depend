@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1476102809 source:c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\reversing linked list\driver.c
+	"Interface.h"
+
+1476100769 c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\reversing linked list\interface.h
+	"LinkedList.h"
+	<stdlib.h>
+	<stdio.h>
+
+1476083968 c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\reversing linked list\linkedlist.h
+
+1476102657 source:c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\reversing linked list\implementation.c
+	"Interface.h"
+

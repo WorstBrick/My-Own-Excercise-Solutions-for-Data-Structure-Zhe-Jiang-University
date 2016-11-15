@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1476598470 source:c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\pop sequence\driver.c
+	"Interface.h"
+
+1476597972 c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\pop sequence\interface.h
+	"Stack.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
+1476598082 c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\pop sequence\stack.h
+
+1476601164 source:c:\users\administrator\desktop\data structure\chap3 linear structure\exercise\pop sequence\implementation.c
+	"Interface.h"
+

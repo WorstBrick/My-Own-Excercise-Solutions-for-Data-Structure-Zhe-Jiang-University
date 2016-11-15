@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1478765746 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\test all sorting\driver.c
+	"Interface.h"
+
+1478768485 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\test all sorting\interface.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Item.h"
+
+1478766241 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\test all sorting\item.h
+

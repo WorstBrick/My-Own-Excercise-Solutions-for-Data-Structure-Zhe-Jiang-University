@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1474269868 source:f:\code\数据结构\本章习题\3-11\表达式转换\driver.c
+	"Interface.h"
+
+1474269572 f:\code\数据结构\本章习题\3-11\表达式转换\interface.h
+	"Item.h"
+	<stdlib.h>
+	<stdbool.h>
+	<stdio.h>
+	<ctype.h>
+
+1474261158 f:\code\数据结构\本章习题\3-11\表达式转换\item.h
+
+1474261272 source:f:\code\数据结构\本章习题\3-11\表达式转换\implementation.c
+	"Interface.h"
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1475829970 source:c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\path in the heap\driver.c
+	"Interface.h"
+
+1475829585 c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\path in the heap\interface.h
+	"MinHeap.h"
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+
+1475829190 c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\path in the heap\minheap.h
+

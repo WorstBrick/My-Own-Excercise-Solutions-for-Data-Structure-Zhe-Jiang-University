@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1479017782 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\insert or merge\implementation.c
+	"Interface.h"
+
+1479016698 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\insert or merge\interface.h
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
+1479017597 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\insert or merge\driver.c
+	"Interface.h"
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1475133238 source:c:\users\administrator\desktop\data structure\chap4 tree\4.4 binary search tree\excercise\is it the same bst\driver.c
+	"Interface.h"
+
+1475132088 c:\users\administrator\desktop\data structure\chap4 tree\4.4 binary search tree\excercise\is it the same bst\interface.h
+	"BSTree.h"
+	<stdlib.h>
+	<stdbool.h>
+	<stdio.h>
+
+1475129012 c:\users\administrator\desktop\data structure\chap4 tree\4.4 binary search tree\excercise\is it the same bst\bstree.h
+
+1475134836 source:c:\users\administrator\desktop\data structure\chap4 tree\4.4 binary search tree\excercise\is it the same bst\implementation.c
+	"Interface.h"
+

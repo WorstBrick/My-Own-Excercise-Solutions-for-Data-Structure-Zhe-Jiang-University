@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1475212849 source:c:\users\administrator\desktop\data structure\chap4 tree\4.5 avl tree\excercise\root of avl tree\driver.c
+	"Interface.h"
+	<stdio.h>
+
+1475213788 c:\users\administrator\desktop\data structure\chap4 tree\4.5 avl tree\excercise\root of avl tree\interface.h
+	"AvlTree.h"
+
+1475211565 c:\users\administrator\desktop\data structure\chap4 tree\4.5 avl tree\excercise\root of avl tree\avltree.h
+

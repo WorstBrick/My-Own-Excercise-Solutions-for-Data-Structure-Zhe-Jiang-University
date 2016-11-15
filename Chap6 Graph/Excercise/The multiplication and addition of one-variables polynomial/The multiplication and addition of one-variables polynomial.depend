@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1477110683 source:c:\users\administrator\desktop\data structure\chap6 graph\excercise\the multiplication and addition of one-variables polynomial\driver.c
+	"Interface.h"
+
+1477110161 c:\users\administrator\desktop\data structure\chap6 graph\excercise\the multiplication and addition of one-variables polynomial\interface.h
+	"Poly.h"
+	<stdlib.h>
+	<stdio.h>
+
+1477032626 c:\users\administrator\desktop\data structure\chap6 graph\excercise\the multiplication and addition of one-variables polynomial\poly.h
+
+1477111664 source:c:\users\administrator\desktop\data structure\chap6 graph\excercise\the multiplication and addition of one-variables polynomial\implementation.c
+	"Interface.h"
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1475919833 source:c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\file transfer\driver.c
+	"Interface.h"
+
+1475919568 c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\file transfer\interface.h
+	"Computer.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
+1475916940 c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\file transfer\computer.h
+
+1475919619 source:c:\users\administrator\desktop\data structure\chap4 tree\the chapter excercise\file transfer\implementation.c
+	"Interface.h"
+

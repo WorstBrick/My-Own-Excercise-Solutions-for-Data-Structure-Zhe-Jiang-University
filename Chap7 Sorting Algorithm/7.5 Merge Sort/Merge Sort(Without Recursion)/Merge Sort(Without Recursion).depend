@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1478928752 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.5 merge sort\merge sort(without recursion)\driver.c
+	"Interface.h"
+
+1478928602 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.5 merge sort\merge sort(without recursion)\interface.h
+	"Item.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
+1478926361 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.5 merge sort\merge sort(without recursion)\item.h
+
+1478931384 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\7.5 merge sort\merge sort(without recursion)\implementation.c
+	"Interface.h"
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1474208680 source:f:\code\数据结构\本章习题\3-9\堆栈操作合法性\implementation.c
+	"Interface.h"
+
+1474208670 f:\code\数据结构\本章习题\3-9\堆栈操作合法性\interface.h
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	"Item.h"
+
+1474208676 f:\code\数据结构\本章习题\3-9\堆栈操作合法性\item.h
+
+1474250352 source:f:\code\数据结构\本章习题\3-9\堆栈操作合法性\driver.c
+	"Interface.h"
+

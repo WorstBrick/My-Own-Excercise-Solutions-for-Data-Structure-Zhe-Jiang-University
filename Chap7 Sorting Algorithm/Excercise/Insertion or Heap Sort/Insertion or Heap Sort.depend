@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1479105289 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\insertion or heap sort\driver.c
+	"Interface.h"
+
+1479105407 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\insertion or heap sort\interface.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1479105929 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\insertion or heap sort\implementation.c
+	"Interface.h"
+

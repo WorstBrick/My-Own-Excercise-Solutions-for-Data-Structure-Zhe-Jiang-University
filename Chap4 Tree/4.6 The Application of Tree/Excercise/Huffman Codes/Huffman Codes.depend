@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1476510218 source:c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\huffman codes\driver.c
+	"Interface.h"
+
+1476507143 c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\huffman codes\interface.h
+	"Tree.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	<math.h>
+
+1476502669 c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\huffman codes\tree.h
+
+1476517073 source:c:\users\administrator\desktop\data structure\chap4 tree\4.6 the application of tree\excercise\huffman codes\implementation.c
+	"Interface.h"
+

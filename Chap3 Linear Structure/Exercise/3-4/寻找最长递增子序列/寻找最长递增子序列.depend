@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1474121802 source:f:\code\数据结构\本章习题\3-4\寻找最长递增子序列\driver.c
+	"Interface.h"
+
+1474121848 f:\code\数据结构\本章习题\3-4\寻找最长递增子序列\interface.h
+	<stdio.h>
+	<stdlib.h>
+

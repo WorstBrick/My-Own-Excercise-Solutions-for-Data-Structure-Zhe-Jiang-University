@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1474189254 source:f:\code\数据结构\本章习题\3-6\一元多项式的乘法与加法运算\driver.c
+	"Interface.h"
+
+1474172422 f:\code\数据结构\本章习题\3-6\一元多项式的乘法与加法运算\interface.h
+	"Item.h"
+	<stdlib.h>
+	<stdio.h>
+
+1474174192 f:\code\数据结构\本章习题\3-6\一元多项式的乘法与加法运算\item.h
+
+1474188972 source:f:\code\数据结构\本章习题\3-6\一元多项式的乘法与加法运算\implementation.c
+	"Interface.h"
+
