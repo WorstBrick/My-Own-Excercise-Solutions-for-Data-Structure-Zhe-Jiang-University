@@ -2,15 +2,12 @@
 
 int main(void)
 {
-    int quant;
-    Node root;
-    BinTree BT;
+    int N;
+    scanf("%d",&N);
+    FakeTree FT=InitTree(N);
 
-    scanf("%d",&quant);
-    BT=InitTree(quant);
-    root=FillTNode(BT,quant);
-    printf("%d\n",root);
-    ListLeaves(BT,quant,root);
+    ReadNode(FT,N);
+    ListLeaves(FT,N);
 
     return 0;
 }

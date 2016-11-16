@@ -1,6 +1,4 @@
 #include <stdbool.h>
-#define NOSON -1
-#define ERROR -2
 
 typedef int Node;
 struct FTNode{

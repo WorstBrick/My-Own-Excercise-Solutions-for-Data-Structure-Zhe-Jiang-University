@@ -4,7 +4,7 @@ Stack CreateStack(int MaxSize)
 {
     Stack S=(Stack)malloc(sizeof(*S));
     S->MaxSize=MaxSize;
-    S->Data=(BinTree *)malloc(MaxSize*sizeof(BinTree));
+    S->Data=(ElementType *)malloc(MaxSize*sizeof(ElementType));
     S->Rear=0;
 
     return S;
@@ -16,7 +16,7 @@ bool IsFull(Stack S)
     return (S->Rear==S->MaxSize);
 }
 
-bool Push(Stack S,BinTree X)
+bool Push(Stack S,ElementType X)
 {
     if (IsFull(S))
         return false;
@@ -34,113 +34,65 @@ bool IsEmpty(Stack S)
 }
 
 
-BinTree Pop(Stack S)
+ElementType Pop(Stack S)
 {
     if (IsEmpty(S))
-        return NULL;
+        return ERROR;
     else
         return (S->Data[--(S->Rear)]);
 }
 
-BinTree CreateTree(void)
+void CreatePreAndIn(TreeNode PreOrder[],TreeNode InOrder[],int N)
 {
-    extern ElementType * Buffer;
-    if ((*Buffer)==NONODE)
-        return NULL;
-    else
-    {
-        BinTree BT=(BinTree)malloc(sizeof(*BT));
-        BT->flag=0;
-        BT->Data=(*Buffer);
-        ++Buffer;
-        BT->Left=CreateTree();
-        ++Buffer;
-        BT->Right=CreateTree();
+    Stack S=CreateStack(N);
+    char Buf[8];
+    int i;
+    Position j=0,k=0;
 
-        return BT;
+    getchar();
+    for (i=0;i<2*N;i++)
+    {
+        fgets(Buf,8,stdin);
+        switch(Buf[1])
+        {
+            case 'u':
+                PreOrder[j]=atoi(Buf+5);
+                Push(S,PreOrder[j]);
+                j++;
+                break;
+            case 'o':
+                InOrder[k++]=Pop(S);
+                break;
+        }
     }
 }
 
-/*void PostorderTraversal(BinTree BT,Stack S)
+static Position FindRootIndex(TreeNode InOrder[],TreeNode Root,int N)
 {
-    if (!BT)
-        return;
-    BinTree T=BT;
-    Push(S,T);
-    (T->flag)++;
-    T=T->Left;
-    while (T || !IsEmpty(S))
-    {
-        if (T)
-        {
-            if (T->flag==0)
-            {
-                Push(S,T);
-                (T->flag)++;
-                T=T->Left;
-                continue;
-            }
-            else if (T->flag==1)
-            {
-                Push(S,T);
-                (T->flag)++;
-                T=T->Right;
-                continue;
-            }
-            else if (T->flag==2)
-            {
-                printf("%d ",T->Data);
-                T=Pop(S);
-                continue;
-            }
-        }
-        else
-        {
-            if (IsEmpty(S))
-                continue;
-            T=Pop(S);
-            if (T->flag==1)
-            {
-                Push(S,T);
-                (T->flag)++;
-                T=T->Right;
-                continue;
-            }
-            else if (T->flag==2)
-            {
-                printf("%d ",T->Data);
-                T=Pop(S);
-                continue;
-            }
-        }
-    }
+    Position i;
 
-}*/
+    for (i=0;i<N && InOrder[i]!=Root;i++);
 
+    return i;
+}
 
-void PostorderTraversal(BinTree BT,Stack S)
+void CreatePostOrder(TreeNode PreOrder[],TreeNode InOrder[],TreeNode PostOrder[],int N)
 {
-    BinTree T=BT;
-
-    while (T || !IsEmpty(S))
+    if (N>0)
     {
-        while (T)
-        {
-            Push(S,T);
-            (T->flag)++;
-            T=T->Left;
-        }
-        T=Pop(S);
-        if (T->flag==1)
-        {
-            Push(S,T);
-            (T->flag)++;
-            T=T->Right;
-        }
-        else if (T->flag==2)
-        {
-            printf("%d ",T->Data);
-            T=Pop(S);
-        }
+        PostOrder[N-1]=PreOrder[0];
+        int LeftScale=FindRootIndex(InOrder,PreOrder[0],N);
+        int RightScale=N-LeftScale-1;
+        CreatePostOrder(PreOrder+1,InOrder,PostOrder,LeftScale);
+        CreatePostOrder(PreOrder+LeftScale+1,InOrder+LeftScale+1,PostOrder+LeftScale,RightScale);
     }
+}
+
+void ShowSequence(TreeNode PostOrder[],int N)
+{
+    int i;
+
+    printf("%d",PostOrder[0]);
+    for (i=1;i<N;i++)
+        printf(" %d",PostOrder[i]);
 }

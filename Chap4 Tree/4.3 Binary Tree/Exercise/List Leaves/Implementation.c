@@ -50,9 +50,18 @@ FakeTree InitTree(int N)
     int i;
 
     for (i=0;i<N;i++)
-        FT[i].Flag=true;
+        FT[i].Flag=false;
 
     return FT;
+}
+
+Node FindRoot(FakeTree FT,int N)
+{
+    Node i;
+
+    for (i=0;i<N && FT[i].Flag;i++);
+
+    return i;
 }
 
 void ReadNode(FakeTree FT,int N)
@@ -65,6 +74,38 @@ void ReadNode(FakeTree FT,int N)
     {
         scanf("%c %c",&Left,&Right);
         getchar();
+        FT[i].Left=(Node)Left-48;
+        FT[i].Right=(Node)Right-48;
+        if (FT[i].Left!=NOSON)
+            FT[FT[i].Left].Flag=true;
+        if (FT[i].Right!=NOSON)
+            FT[FT[i].Right].Flag=true;
+    }
+}
 
+void ListLeaves(FakeTree FT,int N)
+{
+    Node Root=FindRoot(FT,N);
+    Queue Q=CreateQueue(N);
+    AddQ(Q,Root);
+    bool Flag=true;
+
+    while (!IsEmpty(Q))
+    {
+        Root=DeleteQ(Q);
+        if (FT[Root].Left!=NOSON)
+            AddQ(Q,FT[Root].Left);
+        if (FT[Root].Right!=NOSON)
+            AddQ(Q,FT[Root].Right);
+        if (FT[Root].Left==NOSON && FT[Root].Right==NOSON)
+        {
+            if (Flag)
+            {
+                printf("%d",Root);
+                Flag=false;
+            }
+            else
+                printf(" %d",Root);
+        }
     }
 }

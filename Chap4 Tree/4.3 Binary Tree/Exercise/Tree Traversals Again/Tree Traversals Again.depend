@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1475050331 source:c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\driver.c
+1479299866 source:c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\driver.c
 	"Interface.h"
 
-1475049266 c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\interface.h
+1479299147 c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\interface.h
 	"Item.h"
 	<stdbool.h>
 	<stdlib.h>
 	<stdio.h>
 
-1475047568 c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\item.h
+1479299318 c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\item.h
 
-1475049444 source:c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\implementation.c
+1479299632 source:c:\users\administrator\desktop\data structure\chap4 tree\4.3 binary tree\exercise\tree traversals again\implementation.c
 	"Interface.h"
 

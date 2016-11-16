@@ -1,19 +1,12 @@
-#define NONODE -1
-//树的定义
-typedef int ElementType;
-typedef struct TNode * Position;
-struct TNode{
-    char flag;
-    ElementType Data;
-    Position Left;
-    Position Right;
-};
-typedef Position BinTree;
+typedef int TreeNode;
 
 //栈的定义
-typedef struct SNode * Stack;
+typedef TreeNode ElementType;
+typedef ElementType * StorageWay;
+typedef int Position;
 struct SNode{
     int MaxSize;
-    BinTree * Data;
-    int Rear;
+    StorageWay Data;
+    Position Rear;
 };
+typedef struct SNode * Stack;

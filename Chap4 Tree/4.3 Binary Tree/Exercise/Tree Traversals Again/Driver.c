@@ -1,29 +1,17 @@
 #include "Interface.h"
 
-ElementType *Buffer;
 int main(void)
 {
-    char Input[8];
-    int N,i;
-
+    int N;
     scanf("%d",&N);
-    Buffer=(ElementType *)malloc((2*N+1)*sizeof(ElementType));
-    for (i=0;i<2*N;i++)
-    {
-        fflush(stdin);
-        fgets(Input,7,stdin);
-        if (Input[2]=='p')
-            Buffer[i]=NONODE;
-        else
-            Buffer[i]=atoi(&(Input[5]));
-    }
-    Buffer[i]=NONODE;
 
-    /*for (i=0;i<2*N+1;i++)
-        printf("%d ",Buffer[i]);*/
-    Stack S=CreateStack(2*N+1);
-    BinTree BT=CreateTree();
-    PostorderTraversal(BT,S);
+    TreeNode PreOrder[N];
+    TreeNode InOrder[N];
+    TreeNode PostOrder[N];
+
+    CreatePreAndIn(PreOrder,InOrder,N);
+    CreatePostOrder(PreOrder,InOrder,PostOrder,N);
+    ShowSequence(PostOrder,N);
 
     return 0;
 }
