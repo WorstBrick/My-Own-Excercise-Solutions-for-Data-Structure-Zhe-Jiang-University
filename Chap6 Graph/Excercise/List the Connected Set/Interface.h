@@ -14,7 +14,7 @@ ElementType DeleteQ(Queue);
 //Í¼µÄ½Ó¿Ú
 Graph InitGraph(int N);
 void InsertEdge(Graph G,Edge tmp);
-bool BuildGraph(Graph G,int E);
+void BuildGraph(Graph G,int E);
 void Visit(Vertex V);
 void DFS(Graph G,Vertex V);
 void BFS(Graph G,Vertex V);

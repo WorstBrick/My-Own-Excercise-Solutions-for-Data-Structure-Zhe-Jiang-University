@@ -1,11 +1,12 @@
 #include "Interface.h"
-bool * Visited;
+bool * VisitedDFS;
+bool * VisitedBFS;
 
 //队列的操作集的具体实现
 Queue CreateQueue(int MaxSize)
 {
     Queue Q=(Queue)malloc(sizeof *Q);
-    Q->Data=(ElementType *)malloc(MaxSize);
+    Q->Data=(StorageWay)malloc((MaxSize+1)*sizeof(ElementType));
     Q->Front=0;
     Q->Rear=0;
     Q->MaxSize=MaxSize;
@@ -15,20 +16,19 @@ Queue CreateQueue(int MaxSize)
 
 bool IsFull(Queue Q)
 {
-    //return (Q->Front-(Q->Rear%Q->Maxsize)==1);
-    return ((Q->Rear+1)%Q->MaxSize==Q->Front);
+    return ((Q->Rear+1)%(Q->MaxSize+1)==Q->Front);
 }
 
 bool AddQ(Queue Q,ElementType X)
 {
     if (IsFull(Q))
-    {
-        printf("The Queue is fully.\n");
         return false;
+    else
+    {
+        Q->Rear=(Q->Rear+1)%(Q->MaxSize+1);
+        Q->Data[Q->Rear]=X;
+        return true;
     }
-    Q->Rear=(Q->Rear+1)%Q->MaxSize;
-    Q->Data[Q->Rear]=X;
-    return true;
 }
 
 bool IsEmpty(Queue Q)
@@ -39,14 +39,13 @@ bool IsEmpty(Queue Q)
 ElementType DeleteQ(Queue Q)
 {
     if (IsEmpty(Q))
-    {
-        printf("The queue is empty.\n");
         return ERROR;
+    else
+    {
+        Q->Front=(Q->Front+1)%(Q->MaxSize+1);
+        ElementType X=Q->Data[Q->Front];
+        return X;
     }
-    Q->Front=(Q->Front+1)%(Q->MaxSize);
-    ElementType X=Q->Data[Q->Front];
-
-    return X;
 }
 
 
@@ -56,11 +55,12 @@ Graph InitGraph(int N)
     int i;
     G->Ne=0;
     G->Nv=N;
-    G->AllNodes=(Node)malloc(N*sizeof(PtrToAdjNode));
+    G->AllVers=(VerList)malloc(N*sizeof(struct VNode));
     for (i=0;i<N;i++)
     {
-        G->AllNodes[i]=(PtrToAdjNode)malloc(sizeof(struct AdjNode));
-        G->AllNodes[i]->Next=NULL;
+        G->AllVers[i].FirstEdge=NULL;
+        VisitedBFS[i]=true;
+        VisitedDFS[i]=true;
     }
 
     return G;
@@ -70,36 +70,29 @@ void InsertEdge(Graph G,Edge tmp)
 {
     PtrToAdjNode NewNode=(PtrToAdjNode)malloc(sizeof(*NewNode));
     NewNode->V=tmp->V2;
-    PtrToAdjNode T=G->AllNodes[tmp->V1];
-    while (T->Next && tmp->V2>T->Next->V)
-        T=T->Next;
-    NewNode->Next=T->Next;
-    T->Next=NewNode;
+    NewNode->Next=G->AllVers[tmp->V1].FirstEdge;
+    G->AllVers[tmp->V1].FirstEdge=NewNode;
 
-    NewNode=(PtrToAdjNode)malloc(sizeof(*NewNode));
+    NewNode=(PtrToAdjNode)malloc(sizeof(struct AdjNode));
     NewNode->V=tmp->V1;
-    T=G->AllNodes[tmp->V2];
-    while (T->Next && tmp->V1>T->Next->V)
-        T=T->Next;
-    NewNode->Next=T->Next;
-    T->Next=NewNode;
+    NewNode->Next=G->AllVers[tmp->V2].FirstEdge;
+    G->AllVers[tmp->V2].FirstEdge=NewNode;
 }
 
-bool BuildGraph(Graph G,int E)
+void BuildGraph(Graph G,int E)
 {
-    if (!E)
-        return false;
-
-    G->Ne=E;
-    Edge tmp=(Edge)malloc(sizeof(*tmp));
-    int i;
-
-    for (i=0;i<E;i++)
+    if ((G->Ne=E)!=0)
     {
-        scanf("%d %d",&tmp->V1,&tmp->V2);
-        InsertEdge(G,tmp);
+        Edge tmp=(Edge)malloc(sizeof(*tmp));
+        int i;
+
+        for (i=0;i<E;i++)
+        {
+            scanf("%d %d",&tmp->V1,&tmp->V2);
+            InsertEdge(G,tmp);
+        }
     }
-    return true;
+
 }
 
 void Visit(Vertex V)
@@ -109,17 +102,16 @@ void Visit(Vertex V)
 
 void DFS(Graph G,Vertex V)
 {
-    PtrToAdjNode W=(G->AllNodes)[V]->Next;
-    //if (!Visited[V])
-    /*{*/
-        Visit(V);
-        Visited[V]=true;
-    //}
-    while (W)
+    if (VisitedDFS[V])
     {
-        if (!Visited[W->V])
-            DFS(G,W->V);
-        W=W->Next;
+        Visit(V);
+        VisitedDFS[V]=false;
+        AdjList T=G->AllVers[V].FirstEdge;
+        while (T)
+        {
+            DFS(G,T->V);
+            T=T->Next;
+        }
     }
 }
 
@@ -127,38 +119,58 @@ void DFS(Graph G,Vertex V)
 void BFS(Graph G,Vertex V)
 {
     Queue Q=CreateQueue(G->Nv);
-    PtrToAdjNode tmp;
+    PtrToAdjNode T;
     AddQ(Q,V);
 
     while (!IsEmpty(Q))
     {
         V=DeleteQ(Q);
-        if (Visited[V])
+        if (!VisitedBFS[V])
             continue;
         Visit(V);
-        Visited[V]=true;
-        tmp=G->AllNodes[V]->Next;
-        while (tmp)
+        VisitedBFS[V]=false;
+        T=G->AllVers[V].FirstEdge;
+        while (T)
         {
-            if (!Visited[tmp->V])
-                AddQ(Q,tmp->V);
-            tmp=tmp->Next;
+            if (VisitedBFS[T->V])
+                AddQ(Q,T->V);
+            T=T->Next;
         }
     }
-    free(Q);
+}
+
+static Vertex FindStartPoint(bool * Visited,int N)
+{
+    Vertex V;
+    bool Flag=false;
+
+    for (V=0;V<N;V++)
+    {
+        if (Visited[V])
+        {
+            Flag=true;
+            break;
+        }
+    }
+    if (Flag)
+        return V;
+    else
+        return ERROR;
 }
 
 void TravelAll_DFS(Graph G)
 {
-    Vertex V;
-    int N=G->Nv;
+    Vertex W;
 
-    for (V=0;V<N;V++)
+    while (true)
     {
-        if (!Visited[V])
+        W=FindStartPoint(VisitedDFS,G->Nv);
+        if (W==ERROR)
+            break;
+        else
         {
             printf("{");
-            DFS(G,V);
+            DFS(G,W);
             printf(" }\n");
         }
     }
@@ -166,15 +178,17 @@ void TravelAll_DFS(Graph G)
 
 void TravelAll_BFS(Graph G)
 {
-    Vertex V;
-    int N=G->Nv;
+    Vertex W;
 
-    for (V=0;V<N;V++)
+    while (true)
     {
-        if (!Visited[V])
+        W=FindStartPoint(VisitedBFS,G->Nv);
+        if (W==ERROR)
+            break;
+        else
         {
             printf("{");
-            BFS(G,V);
+            BFS(G,W);
             printf(" }\n");
         }
     }
