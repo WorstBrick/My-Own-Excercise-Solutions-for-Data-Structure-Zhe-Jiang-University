@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1480241113 source:c:\users\administrator\desktop\data structure\chap5 hash\excercises\hashing(hard version)\driver.c
+	"Interface.h"
+
+1480240826 c:\users\administrator\desktop\data structure\chap5 hash\excercises\hashing(hard version)\interface.h
+	"Item.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
+1480222429 c:\users\administrator\desktop\data structure\chap5 hash\excercises\hashing(hard version)\item.h
+
+1480241001 source:c:\users\administrator\desktop\data structure\chap5 hash\excercises\hashing(hard version)\implementation.c
+	"Interface.h"
+

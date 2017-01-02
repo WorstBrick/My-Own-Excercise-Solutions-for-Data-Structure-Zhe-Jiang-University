@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1480143356 source:c:\users\administrator\desktop\data structure\chap5 hash\excercises\the application and login of qq\driver.c
+	"Interface.h"
+
+1480143380 c:\users\administrator\desktop\data structure\chap5 hash\excercises\the application and login of qq\interface.h
+	"Item.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdbool.h>
+
+1480138832 c:\users\administrator\desktop\data structure\chap5 hash\excercises\the application and login of qq\item.h
+
+1480143300 source:c:\users\administrator\desktop\data structure\chap5 hash\excercises\the application and login of qq\implementation.c
+	"Interface.h"
+

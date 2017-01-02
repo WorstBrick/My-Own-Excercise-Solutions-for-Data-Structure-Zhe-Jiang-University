@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1479532322 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\pat judge\driver.c
+	"Interface.h"
+
+1479537938 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\pat judge\interface.h
+	"Item.h"
+	<stdio.h>
+	<stdlib.h>
+
+1479463206 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\pat judge\item.h
+
+1479532264 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\pat judge\implementation.c
+	"Interface.h"
+

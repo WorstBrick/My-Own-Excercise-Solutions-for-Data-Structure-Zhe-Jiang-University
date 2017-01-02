@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1479783322 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\sort with swap(0, i)\driver.c
+	"Interface.h"
+
+1479782038 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\sort with swap(0, i)\interface.h
+	"Item.h"
+	<stdlib.h>
+	<stdio.h>
+
+1479781620 c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\sort with swap(0, i)\item.h
+
+1479783684 source:c:\users\administrator\desktop\data structure\chap7 sorting algorithm\excercise\sort with swap(0, i)\implementation.c
+	"Interface.h"
+

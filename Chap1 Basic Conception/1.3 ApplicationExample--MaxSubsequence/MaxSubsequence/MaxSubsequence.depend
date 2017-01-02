@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1476876125 source:c:\users\administrator\desktop\data structure\chap1 basic conception\1.3 applicationexample--maxsubsequence\driver.c
+	"Interface.h"
+
+1476876135 c:\users\administrator\desktop\data structure\chap1 basic conception\1.3 applicationexample--maxsubsequence\interface.h
+	<stdio.h>
+	<stdlib.h>
+
+1476876101 source:c:\users\administrator\desktop\data structure\chap1 basic conception\1.3 applicationexample--maxsubsequence\maxsubsequence.c
+
